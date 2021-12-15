@@ -65,6 +65,7 @@ Create App for adding public and private stories using Node.js, MongoDB - Atlas,
         npm start dev 
 7. create .gitignore   
   /node_modules
+  *.env
 8. GITHUB: git init
            git add .
          : git commit and push
