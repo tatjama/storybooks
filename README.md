@@ -10,6 +10,8 @@
   - [Built with](#built-with)
   - [Author](#author)
 
+## Important
+  .gitignore .env is not working properly so manuel control .env files are not committed to the repository
 ## Overview
 
 - middleware folder 
@@ -32,7 +34,9 @@ Create App for adding public and private stories using Node.js, MongoDB - Atlas,
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/tatjama/node_storybooks/tree/develop)
+- Solution URL: [GitHub](https://github.com/tatjama/storybooks)
+- [Heroku git URL](https://git.heroku.com/peaceful-everglades-52135.git)
+- Live URL: [Heroku](https://peaceful-everglades-52135.herokuapp.com/)
 
 ## My process
 
@@ -76,6 +80,18 @@ Create App for adding public and private stories using Node.js, MongoDB - Atlas,
 12. Protect Routes with Google authentication version 2.0
 13. Create dashboard stories view
 14. Add new Story, Update Story, Delete Story and View Story
+15. Deploy to Heroku
+    instal Heroku CLI
+    command: heroku --version
+           : heroku login 
+           : heroku create 
+           : heroku -> deploy
+           : heroku git:remote -a powerful-savannah-08202
+           : git push heroku main
+    important: - set variables to Settings ->  Config Vars,
+               - on package.json remove dev dependencies only store in "scripts": "start": "node app.js",
+               - redirect url at passport.js from "auth/google/callback"  to "http://peaceful-everglades-52135.herokuapp.com/auth/google/callback"   
+               - autorize redirect url "http://peaceful-everglades-52135.herokuapp.com/auth/google/callback" at Google Cloud Platform -> credentials -> ADD URI
 ### Built with
 
 1. Node.js,
@@ -93,6 +109,7 @@ Create App for adding public and private stories using Node.js, MongoDB - Atlas,
 13. Materialized css and js cdn,
 14. Font Awesome css cdn,
 15. CKeditor cdn, editor for textarea 
+16. Heroku for deploy app
 ## Author
 
 - Website - [Tatjana Markovic](https://my-react-portfolio-tatjana.vercel.app/)
